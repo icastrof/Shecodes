@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeworkWeek1</title>
+  </head>
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+    h1,
+    h2 {
+      ext-align: center;
+    }
+    p {
+      text-align: center;
+      font-size: 15px;
+      padding: 0;
+      word-spacing: 10px;
+      letter-spacing: 1.5px;
+    }
+    h1 {
+      color: #1964d6;
+      font-size: 34px;
+      font-weight: bold;
+      font-family: Helvetica, Arial, sans-serif;
+      padding: 0;
+      margin: 0px;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-weight: normal;
+      font-size: 34px;
+      padding: 0;
+      margin: 10px 0 20px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    li {
+      padding: 10px 0;
+      border-radius: 10px;
+      transition: all 200ms ease-in-out;
+      max-width: 400px;
+      margin: 0 auto;
+      transition: all 150ms ease-in-out;
+    }
+    h3 {
+      font-size: 20px;
+    }
+    button {
+      background: #1964d6;
+      color: white;
+      border: #1964d6;
+      font-size: 17px;
+      padding: 18px 25px;
+      margin: 20px auto;
+      display: block;
+      border: 1px solid #885df1;
+      border-radius: 100px;
+      transition: all 150ms ease-in-out;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background: white;
+      color: #1964d6;
+    }
+
+    li:hover {
+      background: #fffbef;
+    }
+    .topemoji {
+      font-size: 30px;
+      margin-bottom: 0px;
+    }
+    .coded {
+      margin: 20px;
+      font-family: "Courier New", Courier, monospace;
+      word-spacing: normal;
+      font-size: 17px;
+      letter-spacing: normal;
+    }
+  </style>
+  <body>
+    <p class="topemoji">🌤</p>
+    <h1>Currently 21° in Tokyo</h1>
+    <h2>13° / <strong>23°</strong></h2>
+    <ul>
+      <li>
+        <h3>🌧 Tomorrow</h3>
+        <p>10° / <strong>22°</strong></p>
+      </li>
+      <li>
+        <h3>⛅️ Saturday</h3>
+        <p>15° / <strong>17°</strong></p>
+      </li>
+      <li>
+        <h3>☀️ Sunday</h3>
+        <p>25° / <strong>28°</strong></p>
+      </li>
+
+      <button>Change city</button>
+      <p class="coded">Coded by Ines Fernandes</p>
+    </ul>
+  </body>
+</html>
