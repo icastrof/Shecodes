@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes W1</title>
+  </head>
+  <style>
+    body {
+      background: #f6f2fe;
+    }
+    h1 {
+      color: #885df1;
+      font-size: 48px;
+      text-align: center;
+      text-decoration: underline;
+      font-weight: lighter;
+    }
+    h2 {
+      color: #272044;
+      text-align: center;
+      font-weight: lighter;
+      font-size: 35px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      margin: 0 30px;
+    }
+    a {
+      text-decoration: none;
+    }
+    p {
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    button {
+      background-color: transparent;
+      color: #885df1;
+      font-size: 16px;
+      padding: 13px 20px;
+      margin: 0 auto;
+      display: block;
+      border: 1px solid #885df1;
+      border-radius: 100px;
+      box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+      transition: all 200ms ease-in-out;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    button:hover {
+      background: #885df1;
+      color: #f6f2fe;
+      cursor: pointer;
+    }
+    .coders {
+      color: blue;
+    }
+    .courses {
+      color: red;
+    }
+    .stories {
+      color: green;
+    }
+  </style>
+  <body>
+    <h1>SheCodes</h1>
+    <h2>Coding Workshop</h2>
+    <button>Apply now</button>
+    <ul>
+      <li>
+        <a
+          href="https://www.shecodes.io/students"
+          target="_blank"
+          class="coders"
+        >
+          Coders
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.shecodes.io/workshops"
+          target="_blank"
+          class="courses"
+        >
+          Courses
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.shecodes.io/stories"
+          target="_blank"
+          class="stories"
+        >
+          Stories
+        </a>
+      </li>
+    </ul>
+    <hr />
+    <p>
+      <strong> More info </strong>
+    </p>
+    <br />
+    <img
+      src="https://www.womenonbusiness.com/wp-content/uploads/2019/08/woman-coding.png"
+      width="400"
+      alt="Woman coding"
+    />
+  </body>
+</html>
