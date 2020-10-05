@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: rgb(255, 239, 160, 0.25);
+      max-width: 85%;
+      display: block;
+      margin: 0 auto;
+    }
+    h1,
+    h2,
+    h3,
+    p {
+      color: #ac4b1c;
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    h1 {
+      color: #ac4b1c;
+      margin: 40px 0;
+      font-size: 30px;
+    }
+    h2 {
+      color: #ffd57e;
+      border: 2px solid;
+      border-radius: 10px;
+      font-size: 20px;
+      padding: 10px;
+      margin: 10px 25%;
+      background-color: #ac4b1c;
+    }
+    h3 {
+      color: #fca652;
+      border: 2px solid;
+      border-radius: 10px;
+      font-size: 20px;
+      padding: 5px;
+      margin: 10px 10%;
+    }
+
+    ul {
+      display: block;
+      margin: 0 auto;
+      color: #ac4b1c;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    li {
+      list-style-position: inside;
+      text-align: center;
+    }
+    button {
+      background: #fca652;
+      color: #ac4b1c;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 18px 25px;
+      margin: 20px auto;
+      display: block;
+      border: 1px solid #fca652;
+      border-radius: 30px;
+      transition: all 150ms ease-in-out;
+    }
+    .sleep {
+      list-style-type: "🏡";
+    }
+    .stuff {
+      list-style-type: "😎";
+    }
+    .sun {
+      list-style-type: "☀️";
+    }
+    .reviews {
+      font-weight: normal;
+      font-size: 15px;
+    }
+    .rates {
+      font-size: 15px;
+      font-weight: 100;
+    }
+    .recent {
+      padding: 5px;
+      margin: 10px 35%;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background: #ac4b1c;
+      color: #fca652;
+    }
+    .airbnb {
+      padding: 10px;
+      color: #fca652;
+      font-style: italic;
+    }
+    a {
+      margin: 0 auto;
+    }
+    .coder {
+      font-family: monospace;
+      margin: 20px;
+      padding: 20px 0;
+      font-size: 15px;
+    }
+  </style>
+  <body>
+    <h1>
+      Ever wondered how it would feel to "work from home" in
+      <em>PARADISE?</em>
+    </h1>
+    <h2>👩‍💻 Now you can do it at very accessible rates! 👩‍💻</h2>
+    <h3>
+      Two bedroom apartment for rent in
+      <a
+        href="https://www.tripadvisor.com/Attraction_Review-g1146788-d6991569-Reviews-Cabanas_de_Tavira_Beach-Cabanas_Tavira_Faro_District_Algarve.html"
+        target="_blank"
+        >Cabanas de Tavira</a
+      >, Algarve - Portugal!
+    </h3>
+    <p>Rooms and spaces</p>
+    <ul class="sleep">
+      <li>Bedrooms:2</li>
+      <li>Bathrooms: 1</li>
+      <li>Beds: 4</li>
+    </ul>
+    <p>Essential amenities</p>
+    <ul class="stuff">
+      <li>WIFI</li>
+      <li>Laptop-friendly workspace</li>
+      <li>Heating</li>
+      <li>BBQ Grill</li>
+      <li>Free parking</li>
+    </ul>
+    <p>
+      Rates <br /><em class="rates"
+        >(rates vary according to season and demand)</em
+      >
+    </p>
+    <ul class="sun">
+      <li>
+        <strong>Winter season</strong><em> (from October until March)</em>: from
+        <strong>45eur</strong>/night
+      </li>
+      <li>
+        <strong>Spring season</strong><em> (from March until May)</em>: from
+        <strong>50eur</strong>/night
+      </li>
+    </ul>
+    <button>More info</button>
+    <h3 class="recent">Recent reviews</h3>
+    <p class="reviews">
+      👩‍💻 We stayed with three people in the fishers house of Joao in Cabanas. A
+      friendly host and a charming place with everything you need in it. If you
+      want to be very close to the boat that takes you to the beach of Cabanas,
+      this is the place to stay!
+      <br />
+      <br />
+      👩‍💻 This little house is very comfortable and homey. It was close to many
+      restaurants. I highly recommend it.
+      <br />
+      <br />
+      👩‍💻 Lovely location - quiet but right on the seafront. Wonderfully friendly
+      and patient host who was very understanding about delayed arrival. Lovely
+      place to stay.
+    </p>
+    <p>
+      <a
+        class="airbnb"
+        href="https://www.airbnb.com/rooms/1419440"
+        target="_blank"
+        >Preview on airbnb</a
+      >
+    </p>
+
+    <p class="coder">
+      This page was built by
+      <a href="https://github.com/icastrof" target="_blank">Ines Fernandes</a>
+    </p>
+    <script>
+      function contactDetails() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        alert(
+          `Hi ${name}, as this project is from the 3 week workshop I am not able to keep your email. If you are interested in knowing more about the property feel free to contact me at icastrof.@gmail.com 😀 
+Happy Coding! 👩‍💻`
+        );
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", contactDetails);
+      //save email not possible so here is my email in case you want more info :)
+    </script>
+  </body>
+</html>
