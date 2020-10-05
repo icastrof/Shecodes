@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 500px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 500;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    .left {
+      left: 0;
+      background: red;
+    }
+    .right {
+      right: 0;
+      background: green;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: rgb(255, 239, 160, 0.25);
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 239, 160, 0.3),
+        rgba(255, 239, 160, 1)
+      );
+      max-width: 85%;
+      display: block;
+      margin: 0 auto;
+    }
+    h1,
+    h2,
+    h3,
+    p {
+      color: #ac4b1c;
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+    h1 {
+      color: #ac4b1c;
+      margin: 40px 0;
+      font-size: 30px;
+    }
+    h2 {
+      color: #ffd57e;
+      border: 2px solid;
+      border-radius: 10px;
+      font-size: 20px;
+      padding: 10px;
+      margin: 10px 25%;
+      background-color: #ac4b1c;
+    }
+    h3 {
+      color: #fca652;
+      border: 2px solid;
+      border-radius: 10px;
+      font-size: 20px;
+      padding: 5px;
+      margin: 10px 10%;
+    }
+
+    ul {
+      display: block;
+      margin: 0 auto;
+      color: #ac4b1c;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    li {
+      list-style-position: inside;
+      text-align: center;
+    }
+    button {
+      background: #fca652;
+      color: #ac4b1c;
+      font-weight: bold;
+      font-size: 20px;
+      padding: 18px 25px;
+      margin: 20px auto;
+      display: block;
+      border: 1px solid #fca652;
+      border-radius: 30px;
+      transition: all 150ms ease-in-out;
+      box-shadow: 5px 5px 2px 1px #b88d639f;
+    }
+    hr{
+    background-color: #ac4b1c;
+    height: 1px;
+    border: 0;
+    max-width: 50%;
+    }
+    .sleep {
+      list-style-type: "🏡";
+    }
+    .stuff {
+      list-style-type: "😎";
+    }
+    .sun {
+      list-style-type: "☀️";
+    }
+    .reviews {
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .rates {
+      font-size: 15px;
+      font-weight: 100;
+    }
+    .recent {
+      padding: 5px;
+      margin: 10px 35%;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background: #ac4b1c;
+      color: #fca652;
+    }
+    .airbnb {
+      padding: 10px;
+      color: #fca652;
+      font-style: italic;
+    }
+    a {
+      margin: 0 auto;
+    }
+    .coder {
+      font-family: monospace;
+      margin: 10px;
+      padding: 20px 0;
+      font-size: 15px;
+    }
+  </style>
+  <body>
+    <span>
+
+    </span>
+    <h1>
+      Ever wondered how it would feel to "work from home" in
+      <em>PARADISE?</em>
+    </h1>
+    <h2>👩‍💻 Now you can do it at very accessible rates! 👩‍💻</h2>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img
+          src="https://a0.muscache.com/im/pictures/36149256/2d011279_original.jpg?im_w=1200"
+          style="width: 100%"
+          alt="Ria Formosa View"
+        />
+        <div class="text">Ria Formosa View</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img
+          src="https://a0.muscache.com/im/pictures/86673802/a9abac41_original.jpg?im_w=1200"
+          style="width: 100%"
+          alt="Roof-top Terrace"
+        />
+        <div class="text">Roof-top Terrace</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img
+          src="https://a0.muscache.com/im/pictures/61e5cfea-96d1-42d1-b638-e09971431ac2.jpg?im_w=1200"
+          style="width: 100%"
+          alt="Living Room"
+        />
+        <div class="text">Living Room</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <h3>
+      Two bedroom apartment for rent in
+      <a
+        href="https://www.tripadvisor.com/Attraction_Review-g1146788-d6991569-Reviews-Cabanas_de_Tavira_Beach-Cabanas_Tavira_Faro_District_Algarve.html"
+        target="_blank"
+        >Cabanas de Tavira</a
+      >, Algarve - Portugal!
+    </h3>
+    <p>Rooms and spaces</p>
+    <ul class="sleep">
+      <li>Bedrooms:2</li>
+      <li>Bathrooms: 1</li>
+      <li>Beds: 4</li>
+    </ul>
+    <p>Essential amenities</p>
+    <ul class="stuff">
+      <li>WIFI</li>
+      <li>Laptop-friendly workspace</li>
+      <li>Heating</li>
+      <li>BBQ Grill</li>
+      <li>Free parking</li>
+    </ul>
+    <p>
+      Rates <br /><em class="rates"
+        >(rates vary according to season and demand)</em
+      >
+    </p>
+    <ul class="sun">
+      <li>
+        <strong>Winter season</strong><em> (from October until March)</em>: from
+        <strong>45eur</strong>/night
+      </li>
+      <li>
+        <strong>Spring season</strong><em> (from March until May)</em>: from
+        <strong>50eur</strong>/night
+      </li>
+    </ul>
+    <button>More info</button>
+    <h3 class="recent">Recent reviews</h3>
+    <p class="reviews">
+      👩‍💻 We stayed with three people in the fishers house of Joao in Cabanas. A
+      friendly host and a charming place with everything you need in it. If you
+      want to be very close to the boat that takes you to the beach of Cabanas,
+      this is the place to stay!
+      <br />
+      <br />
+      👩‍💻 This little house is very comfortable and homey. It was close to many
+      restaurants. I highly recommend it.
+      <br />
+      <br />
+      👩‍💻 Lovely location - quiet but right on the seafront. Wonderfully friendly
+      and patient host who was very understanding about delayed arrival. Lovely
+      place to stay.
+    </p>
+    <p>
+      <a
+        class="airbnb"
+        href="https://www.airbnb.com/rooms/1419440"
+        target="_blank"
+        >Preview on airbnb</a
+      >
+      <hr />
+    </p>
+    <p class="coder">
+      This page was built by
+      <a href="https://github.com/icastrof" target="_blank">Ines Fernandes</a>
+    </p>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+      function contactDetails() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let n = email.length;
+        if (n < 2){
+          alert(`Hi ${name}, we will contact you asap.`);
+        } else {
+          alert(`Hi ${name}, as this project is from the 3 week workshop I am not able to keep your email. If you are interested in knowing more about the property feel free to contact me at icastrof.9@gmail.com 😀 
+Happy Coding! 👩‍💻`);
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", contactDetails);
+      //save email not possible so here is my email in case you want more info :)
+    </script>
+  </body>
+</html>
